@@ -11,6 +11,10 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
+    environment:
+      VIRTUAL_HOST: portainer.dev
+#      LETSENCRYPT_HOST: feeds.example.com
+#      LETSENCRYPT_EMAIL: foo@example.com
 
 networks:
   default:
