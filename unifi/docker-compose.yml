@@ -1,0 +1,22 @@
+version: '3'
+services:
+  unifi-test:
+    build: .
+    image: dbrosy/unifi:5.8.24
+    networks:
+      - unifi
+    restart: always
+    ports:
+      - "8080:8080/tcp"
+      - "8443:8443/tcp"
+      - "8843:8843/tcp"
+      - "3478:3478/udp"
+      - "10001:10001/tcp"
+    container_name: unifi
+    volumes:
+      - /home/unifi/data:/var/lib/unifi
+      - /home/unifi/log:/var/log/unifi
+      - /home/unifi/run:/var/run/unifi
+
+networks:
+  unifi:
