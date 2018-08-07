@@ -6,7 +6,7 @@ services:
       - default
     restart: always
     ports:
-      - "80:9000/tcp"
+      - "9000:9000"
     container_name: portainer
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
