@@ -1,1 +1,18 @@
 version: '3'
+services:
+  portainer:
+    image: portainer/portainer
+    networks:
+      - default
+    restart: always
+    ports:
+      - "9000:9000/tcp"
+    container_name: portainer
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
