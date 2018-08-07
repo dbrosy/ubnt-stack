@@ -16,6 +16,9 @@ services:
 #      LETSENCRYPT_HOST: feeds.example.com
 #      LETSENCRYPT_EMAIL: foo@example.com
 
+volumes:
+  portainer_data:
+
 networks:
   default:
     external:
