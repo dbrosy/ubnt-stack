@@ -15,6 +15,7 @@ services:
       - portainer_data:/data
     environment:
       VIRTUAL_HOST: portainer.local
+      VIRTUAL_HOST: 9000
       LETSENCRYPT_HOST: portainer.local
       LETSENCRYPT_EMAIL: security@brosy.com
 
